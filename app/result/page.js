@@ -4,8 +4,9 @@ import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 import getStripe from "@/utils/get-stripe"
 import { useSearchParams } from "next/navigation"
+import { Container, CircularProgress, Typography, Box } from "@mui/material"
 
-const resultPage = () => {
+const ResultPage = () => {
     const router = useRouter()
     const searchParams = useSearchParams()
     const session_id = searchParams.get('session_id')
@@ -80,4 +81,3 @@ const resultPage = () => {
         </Container>
      )
 }
-
